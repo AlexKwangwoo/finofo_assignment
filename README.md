@@ -1,8 +1,8 @@
 <!-- Please read!! -->
 
-- Because of CORS error, local server can not load the original data!!
+🙉 Because of CORS error, local server can not load the original data!!
 
-To do list
+🔥 To do list 🔥
 
 - Main Page (0)
 - Not Found Page (0)
@@ -14,3 +14,9 @@ To do list
 - Jar Component (0)
 - Error -> console (0)
 - Reducer (0)
+
+🔥 To Start 🔥
+
+1. git clone https://github.com/AlexKwangwoo/finofo_assignment.git
+2. npm i
+3. npm start

@@ -195,7 +195,7 @@ export default function Home() {
         </div>
       </div>
       <div className="w-[450px]">
-        <Jar selectedFruit={selectedFruit} />
+        <Jar selectedFruit={selectedFruit} checkFruit={handleFruit} />
       </div>
     </div>
   );

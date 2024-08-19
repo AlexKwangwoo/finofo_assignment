@@ -1,7 +1,13 @@
 import { useEffect, useState } from "react";
 import { IFruit } from "../types";
 
-export default function Jar({ selectedFruit }: { selectedFruit: IFruit[] }) {
+export default function Jar({
+  selectedFruit,
+  checkFruit,
+}: {
+  selectedFruit: IFruit[];
+  checkFruit: (fruit: IFruit) => void;
+}) {
   const [totalCal, setTotalCal] = useState<number>(0);
   useEffect(() => {
     let tempCal = 0;
@@ -25,10 +31,18 @@ export default function Jar({ selectedFruit }: { selectedFruit: IFruit[] }) {
       >
         {selectedFruit &&
           selectedFruit.map((each) => (
-            <div>
-              {" "}
+            <div className="flex items-center">
+              <div
+                onClick={(e) => {
+                  e.stopPropagation();
+                  checkFruit(each);
+                }}
+                className="mb-[1px] mt-[-1px] font-bold w-[15px] h-[15px] text-[13px] cursor-pointer hover:bg-mainHover  flex justify-center items-center border-black border-[1px] bg-main px-[5px] py-[2px] mr-[5px] rounded-[5px]"
+              >
+                -
+              </div>
               {each.name}
-              <span className="text-darkPink text-[11px]">
+              <span className="text-darkPink text-[11px] ml-[4px]">
                 {" "}
                 - ({each.nutritions.calories})
               </span>

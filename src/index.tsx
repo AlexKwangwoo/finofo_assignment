@@ -10,7 +10,7 @@ const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
 root.render(
-  // tanstack (to cache or manage the fatched data)
+  // Tanstack (to cache or manage the fatched data)
   <QueryClientProvider client={client}>
     <RouterProvider router={router} />{" "}
   </QueryClientProvider>

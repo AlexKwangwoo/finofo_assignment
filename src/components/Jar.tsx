@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useCallback, useMemo } from "react";
 import { IFruit } from "../types";
 
 export default function Jar({
@@ -8,14 +8,16 @@ export default function Jar({
   selectedFruit: IFruit[];
   checkFruit: (fruit: IFruit) => void;
 }) {
-  const [totalCal, setTotalCal] = useState<number>(0);
-  useEffect(() => {
+  const calculateCal = useCallback((): number => {
     let tempCal = 0;
     selectedFruit.forEach((each) => {
       tempCal += each.nutritions.calories;
     });
-    setTotalCal(tempCal);
-  }, [selectedFruit]);
+    return tempCal;
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [selectedFruit.length]);
+
+  const totalCal: number = useMemo(() => calculateCal(), [calculateCal]);
 
   return (
     <div className="relative  bg-white h-full flex justify-center items-center">

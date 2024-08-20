@@ -12,6 +12,7 @@ import selectedFruitReducer, {
   Action,
   FruitActionType,
 } from "../reducer/FruitsController-redecer";
+import axios from "axios";
 
 export default function Home() {
   // Main Data

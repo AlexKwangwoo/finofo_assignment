@@ -14,6 +14,10 @@
 - Jar Component (0)
 - Error -> console (0)
 - Reducer (0)
+- Merge my React app into vite (0)
+- Merge my Tailwind into vite (0)
+- Proxy Setting (0)
+- Testing (0)
 
 🔥 To Start 🔥
 

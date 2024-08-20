@@ -1,6 +1,4 @@
-<!-- Please read!! -->
-
-🙉 Because of CORS error, local server can not load the original data!!
+<!-- Please Read -->
 
 🔥 To do list 🔥
 
@@ -19,8 +17,8 @@
 - Proxy Setting (0)
 - Testing (0)
 
-🔥 To Start 🔥
+🔥🔥🔥 To Start 🔥🔥🔥
 
 1. git clone https://github.com/AlexKwangwoo/finofo_assignment.git
 2. npm i
-3. npm start
+3. npm start --legacy-peer-deps
